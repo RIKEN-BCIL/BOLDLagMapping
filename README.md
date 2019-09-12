@@ -1,6 +1,6 @@
 # BOLDLagMapping
 
-## Extraction of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal data
+## Extraction of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
 ### Dependencies
 MATLAB
