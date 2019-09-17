@@ -34,7 +34,7 @@ Images are expected to have been slice-timing corrected, realigned, and spatiall
 
 			ex. 1:500 - use first 300 volumes
 
-			1:2:500 - "decimate" to see the effect of sampling rate (double the TR in this case)
+			1:2:500 - "decimate" to see the effect of sampling rate (see Aso 2017; double the TR for this)
 
 
 
