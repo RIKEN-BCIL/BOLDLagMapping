@@ -35,7 +35,7 @@ function dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
 			ex. 1:500 - use first 300 volumes
 
-				1:2:500 - "decimate" to see the effect of sampling rate (double the TR in this case)
+			1:2:500 - "decimate" to see the effect of sampling rate (double the TR in this case)
 
 
 
