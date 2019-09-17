@@ -11,6 +11,8 @@ MATLAB scripts call [FSL][] commands
 
 function dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
+Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space.
+
 	A result directory will be created in the current directory
 
 	name: string to be added to the result directory name
