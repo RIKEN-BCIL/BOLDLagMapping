@@ -10,9 +10,8 @@ MATLAB scripts call [FSL][] commands
 ### Usage
 
 function dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
-	Lag mapping of 4D BOLD data by Toshihiko Aso@RIKEN-BDR, Kobe, Japan
 
-
+Lag mapping of 4D BOLD data by Toshihiko Aso@RIKEN-BDR, Kobe, Japan
 
 	function dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
@@ -39,7 +38,7 @@ function dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
 
 
-	References
+References
 
 	Aso, T., Jiang, G., Urayama, S. I., & Fukuyama, H. (2017). A resilient, non-neuronal source of the spatiotemporal lag structure detected by bold signal-based blood flow tracking. Frontiers in Neuroscience, 11(MAY), 1?13. https://doi.org/10.3389/fnins.2017.00256
 
