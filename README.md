@@ -3,15 +3,17 @@
 ## Extraction of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
 ### Dependencies
-MATLAB scripts call [FSL][] commands
+MATLAB scripts call [FSL][] commands and [SPM12] functions.
 
 [FSL]: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki "FSL"
+[SPM12]: https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
 
 ### Usage
 
 dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
-Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space.
+- Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space.
+- Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (compared to the neuronal activity). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
 
 	A result directory will be created in the current directory
 
