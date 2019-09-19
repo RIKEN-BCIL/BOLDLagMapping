@@ -10,12 +10,12 @@ MATLAB scripts call [FSL][] commands and [SPM12] functions.
 
 ### Usage
 
-dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
+dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 
 - Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space.
 - Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (compared to the neuronal activity). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
-
-	A result directory will be created in the current directory
+- A result directory will be created in the current directory
+- Options
 
 	name: string to be added to the result directory name (dir)
 
@@ -29,7 +29,7 @@ dir = drLag4D( name, TR, vols, PosiMax, THR, FIX, range)
 
 	THR: minimum height of the valid cross-correlogram peak for lag mapping
 
-	FIX: Specify tracking method. 
+	FIXED: Specify tracking method. 
 			0 = recursive tracking, nonzero = fixed seed tracking
 
 	range: range of the fourth dimension (time) of the 4D data to be used.
