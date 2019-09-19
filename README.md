@@ -12,7 +12,7 @@ MATLAB scripts call [FSL][] commands and [SPM12] functions.
 
 dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 
-- Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space.
+- Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script.
 - Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (compared to the neuronal activity). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
 - A result directory will be created in the current directory
 - Options
@@ -49,7 +49,7 @@ Recursive tracking
 [(in press) Aso, T., Urayama, S., Hidenao, F., & Murai, T. (2019). Axial variation of deoxyhemoglobin density as a source of the low-frequency time lag structure in blood oxygenation level-dependent signals. BioRxiv, 658377.](https://doi.org/10.1101/658377)
 
 Fixed-seed tracking
-
+-
 [Satow, T., Aso, T., Nishida, S., Komuro, T., Ueno, T., Oishi, N., … Fukuyama, H. (2017). Alteration of venous drainage route in idiopathic normal pressure hydrocephalus and normal aging. Frontiers in Aging Neuroscience, 9(NOV), 1–10.](https://doi.org/10.3389/fnagi.2017.00387)
 
 [Nishida, S., Aso, T., Takaya, S., Takahashi, Y., Kikuchi, T., Funaki, T., … Miyamoto, S. (2018). Resting-state Functional Magnetic Resonance Imaging Identifies Cerebrovascular Reactivity Impairment in Patients With Arterial Occlusive Diseases: A Pilot Study. Neurosurgery, 0(0), 1–9.](https://doi.org/10.1093/neuros/nyy434)
