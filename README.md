@@ -25,18 +25,19 @@ dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 
 	PosiMax: Determines tracking range -PosiMax - +PosiMax. 
 
-			Note this parameter affects the bandpass filter. 
+		Note this parameter affects the bandpass filter. 
 
 	THR: Minimum height of the valid cross-correlogram peak for lag mapping
 
 	FIXED: Specify tracking method. 
-			0 = recursive tracking, nonzero = fixed seed tracking
+	
+		0 = recursive tracking, nonzero = fixed seed tracking
 
 	range: Range of the fourth dimension (time) of the 4D data to be used.
 
-			ex. 1:500 - use first 300 volumes
+		ex. 1:500 - use first 500 volumes
 
-			ex. 1:2:500 - "decimate" to see the effect of sampling rate (see Aso 2017; double the TR for this)
+		ex. 1:2:500 - "decimate" to see the effect of sampling rate (see Aso 2017; double the TR for this)
 
 
 
