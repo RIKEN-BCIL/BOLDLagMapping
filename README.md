@@ -13,7 +13,7 @@ MATLAB scripts call [FSL][] commands and [SPM12] functions.
 dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 
 - Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script.
-- Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (compared to the neuronal activity). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
+- Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (in comparison to the neuronal activity confined to the gray matter). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
 - A result directory will be created in the current directory
 - Options
 
