@@ -5,7 +5,8 @@ contact: Toshihiko ASO aso.toshihiko@gmail.com
 ## Extraction of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
 ### Dependencies
-MATLAB scripts call [FSL][] commands and [SPM12] functions.
+For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
+Install FSL & MATLAB then evoke MATLAB from the shell.
 
 [FSL]: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki "FSL"
 [SPM12]: https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
