@@ -13,10 +13,10 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 
 ### Usage
 
-	drLag4D.m for tracking and drDeperf.m for deperfusioning.
+	**drLag4D.m** for tracking and **drDeperf.m** for deperfusioning.
 
 
-dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
+#### dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range) ####
 
 - A result directory will be created in the current directory
 - Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. This normalization is required solely for masking out non-cerebral tissues when extracting the global signal. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script.
@@ -46,7 +46,7 @@ dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 		ex. 1:2:500 - "decimate" to see the effect of sampling rate (see Aso 2017; double the TR for this)
 
 
-drDeperf( vols, Lag, TR, reso, range) 
+#### drDeperf( vols, Lag, TR, reso, range) ####
 
 	vols: fMRI 4D file. Can be relative path assuming lag map folder is in the same folder.
 
