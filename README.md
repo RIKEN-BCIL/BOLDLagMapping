@@ -13,7 +13,7 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 
 ### Usage
 
-	__drLag4D.m__ for tracking and ** drDeperf.m ** for deperfusioning.
+**drLag4D.m** for tracking and **drDeperf.m** for deperfusioning.
 
 
 #### dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range) ####
