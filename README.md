@@ -2,7 +2,7 @@
 
 contact: Toshihiko ASO aso.toshihiko@gmail.com
 
-## Extraction of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
+## Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
 ### Dependencies
 For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
@@ -12,6 +12,8 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 [SPM12]: https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
 
 ### Usage
+
+drLag4D.m for tracking and drDeperf.m for deperfusioning.
 
 dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 
@@ -43,12 +45,33 @@ dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range)
 		ex. 1:2:500 - "decimate" to see the effect of sampling rate (see Aso 2017; double the TR for this)
 
 
+drDeperf( vols, Lag, TR, reso, range) 
+
+	vols: fMRI 4D file. Can be relative path assuming lag map folder is in the same folder.
+
+	Lag: Full path to the lag map. Typically
+		'/XXX/XXX/Lag_XXs_thrX_XX/LagMap.nii'. In case you had downsampled the
+		fMRI data to say 4 mm voxel size from 2 mm for example,  
+		for quick and safe lag mapping, 
+		the map must be upsampled (= resliced to the original space) beforehand. 
+		If it was done on SPM, it would be like: '/XXX/XXX/Lag_XXs_thrX_XX/rLagMap.nii'
+
+	TR: Repetition time in second.
+
+	Below are non-compulsory options
+	
+	reso: Lag resolution in second (set to 1 by default)
+
+	range: Specify fourth dimension (time) of the Seeds.mat data to be
+		used. This is only necessary when lag map was created using
+		concatenated runs, but the deperfusioning must be done for each
+		run. Causes	error or unfavorable phase shift depending on the combination of TR and reso.
 
 ### References
 
 Recursive tracking
 
-[Aso, T., Urayama, S., Hidenao, F., & Murai, T. (2019). Axial variation of deoxyhemoglobin density as a source of the low-frequency time lag structure in blood oxygenation level-dependent signals. PLoS ONE.](https://doi.org/10.1101/658377)
+[Aso, T., Urayama, S., Hidenao, F., & Murai, T. (2019). Axial variation of deoxyhemoglobin density as a source of the low-frequency time lag structure in blood oxygenation level-dependent signals. PLoS ONE.](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0225489)
 
 [Nishida, S., Aso, T., Takaya, S., Takahashi, Y., Kikuchi, T., Funaki, T., … Miyamoto, S. (2018). Resting-state Functional Magnetic Resonance Imaging Identifies Cerebrovascular Reactivity Impairment in Patients With Arterial Occlusive Diseases: A Pilot Study. Neurosurgery, 0(0), 1–9.](https://doi.org/10.1093/neuros/nyy434)
 
