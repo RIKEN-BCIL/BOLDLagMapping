@@ -69,6 +69,7 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 		concatenated runs, but the deperfusioning must be done for each
 		run. Causes	error or unfavorable phase shift depending on the combination of TR and reso.
 ![smoothnoisestructure](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hybrid_image_decomposition.jpg/256px-Hybrid_image_decomposition.jpg)
+
 BOLD deperfusioning is extracting Einstein (neurovascular coupling) by removing Marilyn Monroe (perfusion structure) from this image.
 
 ### References
