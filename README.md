@@ -22,8 +22,6 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 - Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. This normalization is required solely for masking out non-cerebral tissues when extracting the global signal. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script.
 - Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (in comparison to the neuronal activity confined to the gray matter). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
 
-![smoothnoisestructure](https://upload.wikimedia.org/wikipedia/commons/9/9c/Hybrid_image_decomposition.jpg)
-
 - Options
 
 	name: String to be added to the result directory name (dir)
@@ -70,6 +68,8 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 		used. This is only necessary when lag map was created using
 		concatenated runs, but the deperfusioning must be done for each
 		run. Causes	error or unfavorable phase shift depending on the combination of TR and reso.
+![smoothnoisestructure](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hybrid_image_decomposition.jpg/256px-Hybrid_image_decomposition.jpg)
+BOLD deperfusioning is extracting Einstein (neurovascular coupling) by removing Marilyn Monroe (perfusion structure) from this image.
 
 ### References
 
