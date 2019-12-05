@@ -21,7 +21,7 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 #### dir = drLag4D( name, TR, vols, PosiMax, THR, FIXED, range) ####
 
 - A result directory will be created in the current directory
-- Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. This normalization is required solely for masking out non-cerebral tissues when extracting the global signal. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script.
+- Images are expected to have been slice-timing corrected, realigned, and spatially normalized to the MNI space. This normalization is required solely for masking out non-cerebral tissues when extracting the global signal. On computers with RAM < 16GB, reslice the images to 4 mm voxel size to safely run the script. The longer you scan, the better (>10 min). Avoid fast and large head motion that creates signal deflection.
 - Spatial smoothing by 8 mm FWHM is applied in the script, under the assumption of smooth perfusion lag structure (in comparison to the neuronal activity confined to the gray matter). This parameter is subject to change if you assume otherwise, but can result in removal of neurovascular coupling during the "deperfusioning" treatment based on this procedure (Aso 2019; Erdoğan 2016 Front Human Neurosci).
 
 - Options
