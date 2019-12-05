@@ -4,6 +4,8 @@ contact: Toshihiko ASO aso.toshihiko@gmail.com
 
 ## Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
+![lagmaps](https://github.com/RIKEN-BCIL/BOLDLagMapping/blob/master/LagMaps.jpg)
+
 ### Dependencies
 For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
 Install FSL & MATLAB then evoke MATLAB from the shell.
