@@ -1,6 +1,6 @@
 # BOLDLagMapping
 
-contact: Toshihiko ASO aso.toshihiko@gmail.com
+contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
 
 ## Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
