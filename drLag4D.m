@@ -72,7 +72,7 @@ S = system( ['fslmaths ' vols ' -mul 100 -div Tmean Data' ]); if S, error, end
 S = system( [ 'fslmaths Data -nan  -s ' num2str( Sm) ' Data']); if S, return, end
 disp('Filtering...')
 S = system( [ 'fslmaths Data -bptf ' ...
-	num2str( 1/( ULfreq/2*2.35*TR)) ' ' num2str( 1/( ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']); 
+	num2str( 1/( ULfreq/2*2.35*TR)) ' ' num2str( 1/( .8*ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']); 
 
 % initial seed is from the global cerebral signal
 [ P,~,~] = fileparts( mfilename('fullpath'));
