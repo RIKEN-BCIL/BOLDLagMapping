@@ -44,7 +44,7 @@ end
 end
 
 MaxLag = PosiMax*2;		% lag range
-ULfreq = 1/MaxLag;		% upper limit of frequency for uniquely determining the peak
+ULfreq = 1/MaxLag*.8;		% upper limit of frequency for uniquely determining the peak
 
 reso = 1; % Lag resolution: smaller the value, the more memory load
 Nseeds = PosiMax*2/reso + 1;% number of regions/seed timeseries
@@ -72,7 +72,7 @@ S = system( ['fslmaths ' vols ' -mul 100 -div Tmean Data' ]); if S, error, end
 S = system( [ 'fslmaths Data -nan  -s ' num2str( Sm) ' Data']); if S, return, end
 disp('Filtering...')
 S = system( [ 'fslmaths Data -bptf ' ...
-	num2str( 1/( ULfreq/2*2.35*TR)) ' ' num2str( 1/( .8*ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']); 
+	num2str( 1/( ULfreq/2*2.35*TR)) ' ' num2str( 1/( ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']); 
 
 % initial seed is from the global cerebral signal
 [ P,~,~] = fileparts( mfilename('fullpath'));
