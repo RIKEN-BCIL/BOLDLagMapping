@@ -9,11 +9,15 @@ contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/pr
 ![sLFO_anim](https://github.com/RIKEN-BCIL/BOLDLagMapping/blob/master/Lag_model_anim100.gif)
 
 ![smoothnoisestructure](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hybrid_image_decomposition.jpg/256px-Hybrid_image_decomposition.jpg)
+
+element {
+  font-size: 75;
 ```diff
 + BOLD deperfusioning is extracting Einstein (local neurovascular coupling) 
 + by removing smooth Marilyn Monroe (perfusion structure) from this image, 
 + so that the fMRI result becomes sharp and precise. 
 ```
+}
 
 ### Dependencies
 For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
