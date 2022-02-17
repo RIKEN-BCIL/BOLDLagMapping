@@ -21,9 +21,11 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 
 ### Usage
 
-**NEW!** HCP-style pipeline Einsteining version 0.1 released
+**NEW!** HCP-style pipeline **Einsteining_v01.m** (Einsteining version 0.1) released
 with
 **drLag4Drev4_hcp.m** for tracking and **drDeperf_hcp_seed.m** for deperfusioning.
+
+-~-~-~-~-~-~-~-~-~-~
 
 Original version:
 
