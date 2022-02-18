@@ -25,6 +25,9 @@ Install FSL & MATLAB then evoke MATLAB from the shell.
 with
 **drLag4Drev4_hcp.m** for tracking and **drDeperf_hcp_seed.m** for deperfusioning.
 
+- Einsteining is to remove the perfusion lag structure, a major component of physiological "noise" for fMRI. 
+- Application **before** ICA-FIX is recommended!
+
 -~-~-~-~-~-~-~-~-~-~
 
 Original version:
