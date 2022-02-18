@@ -15,6 +15,7 @@ contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/pr
 ### Dependencies
 For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
 Install FSL & MATLAB then evoke MATLAB from the shell.
+(fslmaths in FSL6 may not work normally with the option "-subsamp2offc".)
 
 [FSL]: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki "FSL"
 [SPM12]: https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
@@ -27,6 +28,7 @@ with
 
 - **Einsteining** is a hard working process to remove the perfusion lag structure, a major component of physiological noise for fMRI. 
 - Application **before** ICA-FIX is recommended (see Aso & Hayashi, ISMRM2022)
+- Modify "Fdir" to point to your **FSL5** installation.
 
 -~-~-~-~-~-~-~-~-~-~
 
