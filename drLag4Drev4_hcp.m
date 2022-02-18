@@ -22,7 +22,7 @@ function dir = drLag4Drev4_hcp( name, TR, vols, PosiMax, THR, FIXED, Sm, range)
 %	Aso, T., et al. (2017) Frontiers in Neuroscience, 11(MAY), 1-13. https://doi.org/10.3389/fnins.2017.00256
 %	Satow, T., et al. (2017) Alteration of venous drainage route in idiopathic normal pressure hydrocephalus and normal aging. Frontiers in Aging Neuroscience, 9(NOV), 1-10. https://doi.org/10.3389/fnagi.2017.00387
 %	Nishida, S., et al. (2018) Resting-state Functional Magnetic Resonance Imaging Identifies Cerebrovascular Reactivity Impairment in Patients With Arterial Occlusive Diseases: A Pilot Study. Neurosurgery, 0(0), 1-9. https://doi.org/10.1093/neuros/nyy434
-%	(in press) Aso, T., et al. (2019) Axial variation of deoxyhemoglobin density as a source of the low-frequency time lag structure in blood oxygenation level-dependent signals. PLOS One, https://doi.org/10.1101/658377
+%	Aso, T., et al. (2019) Axial variation of deoxyhemoglobin density as a source of the low-frequency time lag structure in blood oxygenation level-dependent signals. PLOS One, https://doi.org/10.1101/658377
 
 global Fdir
 Fdir = '/mnt/pub/devel/fsl-5.0.9/bin/'
@@ -237,7 +237,7 @@ Lag1 = reshape( Lag, Ysize(1:3))*TR;
 Vout = V(1); Vout.fname = [ 'LagOrig.nii'];
 spm_write_vol( Vout, Lag1);
 
-drErode_Lag( 'LagOrig.nii', ROIimage, MaxLag);
+drErode_Lag( 'LagOrig.nii', Bmask, MaxLag);
 !mv eLagOrig.nii LagMap.nii
 disp('Finished')
 cd ..
