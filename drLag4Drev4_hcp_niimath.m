@@ -83,20 +83,20 @@ Sm = Sm / sqrt( 8*log(2)); % Sm-mm smoothing
 
 disp('Preparing the data...') %-------------------------------------------
 
-S = system( [ Fdir 'fslmaths ' vols ' -Tstd SD.nii']); if S, return, end
-S = system( [ Fdir 'fslmaths ' vols ' -Tmean Tmean']); if S, return, end
-S = system( [ Fdir 'fslmaths Tmean -thrp 25 Mask']); % Mask 
+S = system( [ 'niimath ' vols ' -Tstd SD.nii']); if S, return, end
+S = system( [ 'niimath ' vols ' -Tmean Tmean']); if S, return, end
+S = system( [ 'niimath Tmean -thrp 25 Mask']); % Mask 
 
 %S = system( ['fslmaths ' vols ' -sub Tmean -mul 1000 -div SD Data']); if S, return, end
-S = system( [ Fdir 'fslmaths ' vols ' -mul 100 -div Tmean Data' ]); if S, error, end
+S = system( [ 'niimath ' vols ' -mul 100 -div Tmean Data' ]); if S, error, end
 
 disp('Filtering...')
 if Sm>0
-	S = system( [ Fdir 'fslmaths Data -nan  -s ' num2str( Sm) ' -bptf ' ...
+	S = system( [ 'niimath Data -nan  -s ' num2str( Sm) ' -bptf ' ...
 	num2str( 1/( 0.008*2.35*TR)) ' ' num2str( 1/( ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']);
 	if S, return, end
 else
-	S = system( [ Fdir 'fslmaths Data -nan -bptf ' ...
+	S = system( [ 'niimath Data -nan -bptf ' ...
 	num2str( 1/( 0.008*2.35*TR)) ' ' num2str( 1/( ULfreq*2.35*TR)) ' ' pwd '/masked_' num2str( MaxLag) 's.nii']); 
 	if S, return, end
 end
@@ -105,7 +105,7 @@ end
 [ P,~,~] = fileparts( mfilename('fullpath'));
 %ROIimage = spm_read_vols( spm_vol( drReslice( 'Mask.nii', [ P '/BrainMask_lag.nii'])));
 ROIimage =  spm_read_vols( spm_vol( [ P '/BrainMask_lag_subsamp2offc.nii']));
-Bmask =  spm_read_vols( spm_vol( 'Mask.nii'));
+Bmask =  spm_read_vols( spm_vol( 'Mask.nii')) + ROIimage;
 
 V = spm_vol( ['masked_' num2str( MaxLag) 's.nii']);
 disp('Reading volumes...')
