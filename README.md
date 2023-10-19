@@ -1,5 +1,12 @@
 # BOLDLagMapping
+
+## Please visit here for long-TR data (>=2s):
+## https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning
+
 # For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
+
+
+
 
 contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
 
