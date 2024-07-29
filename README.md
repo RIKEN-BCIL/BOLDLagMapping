@@ -1,9 +1,9 @@
 # BOLDLagMapping
 
-## Please visit here for long-TR data (>=2s):
-## https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning
+## Please go to "Release" for non-multiband (long TR) version:
+## [https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/Rev7)
 
-# For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
+## For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
 
 
 
