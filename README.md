@@ -1,14 +1,13 @@
 # BOLDLagMapping
 
-## Please go to "Release" for non-multiband (long TR) version:
+## Please go to "Release" in this page for non-multiband (long TR) version:
 ## [https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/Rev7)
 
 ## For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
 
+#The current versions include everything in one script named Einsteining**
 
-
-
-contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
+#contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
 
 ## Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
