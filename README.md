@@ -1,13 +1,13 @@
 # BOLDLagMapping
 
-## Please go:
-## [https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/Rev7)
+Please visit:
+[https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/Rev7)
 
-## For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
+For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
 
-## contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
+contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
 
-## Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
+Extraction and removal of the time-lag structure within 4D blood oxygenation level dependent (BOLD) signal MRI data
 
 ![lagmaps](https://github.com/RIKEN-BCIL/BOLDLagMapping/blob/master/LagMaps.jpg)
 ![lagmap_anim](https://github.com/RIKEN-BCIL/BOLDLagMapping/blob/master/lagmap_anim.gif)
@@ -18,7 +18,7 @@
 #### - BOLD deperfusioning is extracting Einstein (local neurovascular coupling) by removing smooth Marilyn Monroe (perfusion structure) from this image, so that the fMRI result becomes sharp and precise. 
 
 ### Dependencies
-For Linux/Mac. MATLAB scripts call [FSL][] commands and [SPM12] functions. 
+For Linux/Mac (Not tested on Mac anymore). MATLAB scripts call [FSL][] commands and [SPM12] functions. 
 Install FSL & MATLAB then evoke MATLAB from the shell.
 
 (fslmaths in FSL6 may cause errors with the option "-subsamp2offc".)
