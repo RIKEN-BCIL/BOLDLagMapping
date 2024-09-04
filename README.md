@@ -3,7 +3,7 @@
 Please visit:
 [https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/rev8hcp)
 
-For HCP-style fMRI data, use https://github.com/RIKEN-BCIL/HCPstyle-BOLDLagMappingAndCleaning
+For HCP-style fMRI data, use [BOLDLagMapping_Deperfusioning for HCP-style data](https://github.com/aso-toshihiko/BOLDLagMapping_Deperfusioning/releases/tag/rev8hcp)
 
 contact: Toshihiko ASO aso.toshihiko@gmail.com / https://www.researchgate.net/profile/Toshihiko_Aso
 
